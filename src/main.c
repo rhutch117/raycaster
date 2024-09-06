@@ -1,5 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
+
+#define GLEW_STATIC
+#include "vendors/GL/glew.h"
 #include "vendors/GLFW/glfw3.h"
 
 
