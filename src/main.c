@@ -35,10 +35,8 @@ bool present_window(void) {
       return false;
   }
 
-  /* Make the window's context current */
   glfwMakeContextCurrent(window);
 
-  /* Loop until the user closes the window */
   while (!glfwWindowShouldClose(window)) {
       /* Render here */
       glClear(GL_COLOR_BUFFER_BIT);
