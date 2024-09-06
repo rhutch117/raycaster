@@ -8,3 +8,9 @@ APP_LINKERS:= -L./src/vendors/GLFW/lib -lglfw3
 
 build:
 	clang $(C_FILES) -o $(BUILD_DIR)/$(APP_NAME) $(APP_INCLUDES) $(APP_LINKERS)
+
+run:
+	./bin/raycaster
+
+clean:
+	rm ./bin/raycaster
