@@ -6,8 +6,7 @@
 
 GLFWwindow* window;
 
-int main(void) {
-
+int create_window(void) {
   /* Initialize the library */
   if (!glfwInit()) {
     fprintf(stderr, "Unable to Initialize glfw library\n");
@@ -37,5 +36,9 @@ int main(void) {
   }
 
   glfwTerminate();
-  return 0;
+  return EXIT_SUCCESS;
+}
+
+int main(void) {
+  create_window();
 }
