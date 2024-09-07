@@ -9,6 +9,13 @@
 
 GLFWwindow* window;
 
+// Our first triangle
+float vertices[] = {
+  -0.5f, -0.5f, 0.0f,
+   0.5f, -0.5f, 0.0f,
+   0.0f,  0.5f, 0.0f,
+};
+
 void processInput(GLFWwindow *window) {
   if(glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
     glfwSetWindowShouldClose(window, true);
@@ -35,7 +42,7 @@ bool configure_glfw(void) {
   return true;
 }
 
-bool present_window(void) {
+int present_window(void) {
 
   if(!configure_glfw()) {
     fprintf(stderr, "Unable to configure glfw library\n");
@@ -79,7 +86,7 @@ bool present_window(void) {
   }
 
   glfwTerminate();
-  return true;
+  return 0;
 }
 
 int main(void) {
