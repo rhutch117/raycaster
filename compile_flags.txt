@@ -1,3 +1,2 @@
 -std=c99
--I/opt/homebrew/include
 -I/opt/homebrew/opt/glfw/include
