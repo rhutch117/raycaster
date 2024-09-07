@@ -27,3 +27,22 @@ Build the binary by running `make`
 
 Start the application with `./bin/raycaster` or `make run`
 
+<hr>
+
+### Graphics Programming Concepts
+
+#### Graphics Pipeline
+A set of 3d coordinates is sent through the graphics pipeline where they are transformed 
+into 2d pixels on the screen. The pipeline involves several steps that can easily be 
+executed in parallel. Modern graphics cards processing cores run these "shaders" for
+each step of the pipeline. 
+
+Steps may include:
+* Vertex shader
+* Geometry shader
+* Shape assembly
+* Rasterization
+* Fragment Shader (Fragment is all the data required for OpenGL to render a single pixel)
+* Tests & blending
+
+***Almost all use cases can be handled using the vertex and fragment shader.***
