@@ -1,10 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define GLEW_STATIC
-#include "vendors/GL/glew.h"
-#include "vendors/GLFW/glfw3.h"
-
+#include <GLFW/glfw3.h>
 
 GLFWwindow* window;
 
@@ -15,7 +12,6 @@ bool configure_glfw(void) {
   glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
   glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-
 
   if (!glfwInit()) {
     fprintf(stderr, "Unable to Initialize glfw library\n");
@@ -56,5 +52,6 @@ bool present_window(void) {
 }
 
 int main(void) {
+
   return present_window();
 }
